@@ -145,3 +145,6 @@ class Submission(models.Model):
         on_delete=models.CASCADE
     )
     choices = models.ManyToManyField(Choice)
+
+    def __str__(self):
+        return 'Enrollment ID: ' + str(self.enrollment.id)
